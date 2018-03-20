@@ -43,6 +43,10 @@ public class ApplicationLifeCycle extends Application implements Application.Act
         }
     }
 
+    public boolean isForeground() {
+        return activityVisibleCount > 0;
+    }
+
     @Override
     public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
 
